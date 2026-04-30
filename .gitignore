@@ -1,0 +1,8 @@
+# Terraform
+**.tfstate
+**.backup
+**/.terraform
+**.lock.hcl
+**.tfvars
+**.iso
+
