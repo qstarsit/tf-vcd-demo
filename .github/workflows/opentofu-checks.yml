@@ -1,0 +1,31 @@
+name: "OpenTofu checks"
+
+on: [push]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      # This creates a separate job for each directory listed
+      matrix:
+        directory: ["tf/modules/vm-clone", "tf/modules/vm_folder", "tf/cluster01", "tf/linux-dmz", "tf/linux-management"]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup opentofu
+        uses: opentofu/setup-opentofu@v2
+        with:
+          tofu_version: "1.11.6"
+
+      - name: OpenTofu fmt
+        working-directory: ${{ matrix.directory }}
+        run: tofu fmt -check
+
+
+      - name: Terraform Validate
+        working-directory: ${{ matrix.directory }}
+        run: |
+          tofu init -backend=false
+          tofu validate
