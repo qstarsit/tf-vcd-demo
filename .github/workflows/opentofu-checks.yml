@@ -8,7 +8,7 @@ jobs:
     strategy:
       # This creates a separate job for each directory listed
       matrix:
-        directory: ["tf/modules/vm-clone", "tf/modules/vm_folder", "tf/cluster01", "tf/linux-dmz", "tf/linux-management"]
+        directory: ["tf/modules/vm_clone", "tf/modules/vm_folder", "tf/cluster01", "tf/linux-dmz", "tf/linux-management"]
 
     steps:
       - name: Checkout Code

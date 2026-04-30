@@ -1,4 +1,4 @@
-name: "OpenTofu checks"
+name: "Markdown checks"
 
 on: [push]
 
