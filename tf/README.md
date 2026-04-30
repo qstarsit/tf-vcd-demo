@@ -21,8 +21,8 @@ Voor het gebruik van OpenTofu heb je de volgende gegevens nodig:
   ```
 
   Indien deze al wel aanwezig is, pull je de laatste wijzigingen:
-  ``` sh
 
+  ``` sh
   cd linux-platform
   git checkout main
   git pull
@@ -99,13 +99,13 @@ oude server raak je kwijt, tenzij je hier een backup van maakt.
 * De server krijgt nu een shutdown (als hij nog aan zou staan), wordt
   vervolgens uit VMware vSphere verwijderd.
 * Nu kunnen we de server opnieuw aanmaken met:
-* 
+
   ``` sh
   tofu apply -target=module.ubu-ran-01
   ```
 
 * Verwijder de host keys uit je SSH configuratie, bijvoorbeeld:
-* 
+
   ``` sh
   ssh-keygen -f ~/.ssh/known_hosts -R 10.56.15.112
   ssh-keygen -f ~/.ssh/known_hosts -R ubu-ran-01
