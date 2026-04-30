@@ -37,7 +37,7 @@ Voor het gebruik van OpenTofu heb je de volgende gegevens nodig:
   shell history:
 
   ``` sh
-  export TF_VAR_vcenter_username="..."   # Vul op de puntjes je vCenter username in
+  export TF_VAR_vcenter_username="..."   # vCenter username
    export TF_VAR_vcenter_password="..."  # vCenter wachtwoord
   export TF_VAR_gitlab_username="..."    # GitLab username
    export TF_VAR_gitlab_token="..."      # GitLab access token
