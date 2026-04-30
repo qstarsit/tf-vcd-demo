@@ -12,5 +12,5 @@ jobs:
 
       - uses: articulate/actions-markdownlint@v1
         with:
-          files: 'docs/**/*.md'
+          files: '**/*.md'
           version: 0.28.1
